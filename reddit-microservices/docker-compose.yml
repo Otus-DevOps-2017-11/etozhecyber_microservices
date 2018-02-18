@@ -8,20 +8,20 @@ services:
       - back_net
   ui:
     build: ./ui
-    image: ${REGISTRY_USERNAME}/ui:${UIVERSION}
+    image: ${REGISTRY_USERNAME}/ui:${UI_VERSION}
     ports:
-      - ${UIPORT}:9292/tcp
+      - ${UI_PORT}:9292/tcp
     networks:
       - front_net
   post:
     build: ./post-py
-    image: ${REGISTRY_USERNAME}/post:${POSTVERSION}
+    image: ${REGISTRY_USERNAME}/post:${POST_VERSION}
     networks:
       - back_net
       - front_net
   comment:
     build: ./comment
-    image: ${REGISTRY_USERNAME}/comment:${COMMENTVERSION}
+    image: ${REGISTRY_USERNAME}/comment:${COMMENT_VERSION}
     networks:
       - back_net
       - front_net
