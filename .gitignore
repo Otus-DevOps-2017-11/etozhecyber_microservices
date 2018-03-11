@@ -1,7 +1,4 @@
-build_info.txt
-prometheus/
 .env
-*log
 
 ## python specific
 *.pyc
