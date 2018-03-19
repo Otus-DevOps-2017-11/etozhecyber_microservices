@@ -5,7 +5,9 @@ services:
     volumes:
       - post_db:${DB_PATH}
     networks:
-      - back_net
+      back_net:
+        aliases:
+          - comment_db
   ui:
     image: ${REGISTRY_USERNAME}/ui:${UI_VERSION}
     ports:
@@ -48,11 +50,17 @@ services:
       - '--path.procfs=/host/proc'
       - '--path.sysfs=/host/sys'
       - '--collector.filesystem.ignored-mount-points="^/(sys|proc|dev|host|etc)($$|/)"'
-
+  alertmanager: 
+    image: ${REGISTRY_USERNAME}/alertmanager 
+    command: 
+      - '--config.file=/etc/alertmanager/config.yml' 
+    ports: 
+      - 9093:9093
+    networks:
+      - back_net
 volumes:
   post_db:
   prometheus_data:
-
 networks:
   front_net:
   back_net:
