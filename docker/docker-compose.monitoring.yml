@@ -44,6 +44,8 @@ services:
 
   node-exporter:
     image: prom/node-exporter:v0.15.2
+    deploy: 
+      mode: global 
     networks:
       - back_net
     user: root
