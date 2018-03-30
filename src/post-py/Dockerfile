@@ -3,6 +3,8 @@ FROM python:3.6.0-alpine
 WORKDIR /app
 COPY . /app
 
+RUN apk add --update build-base \
+  && rm -rf /var/cache/apk/*
 RUN pip install -r /app/requirements.txt
 
 ENV POST_DATABASE_HOST post_db
