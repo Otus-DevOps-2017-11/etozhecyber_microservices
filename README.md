@@ -70,3 +70,9 @@ Inspect на образ отображает параметры образа, а
 # Homework-28
 ## Kubernetes 1
 В данной работе подняли кластер Kubernetes по мануалу **Kubernetes The Hard Way**. 
+
+# Homework-29
+## Kubernetes 2
+В данной работе подняли кластер на локальной машине с помощью minikube.Запустили приложение reddit в нем.
+После этого подняли кластер в Google Kubernetes Engine.Тоже в нем запустили приложение. 
+Также в GKE запустили запустили kubernetes-dashboard и дали себе права для доступа туда. 
