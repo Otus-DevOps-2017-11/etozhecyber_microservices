@@ -80,3 +80,7 @@ Inspect на образ отображает параметры образа, а
 # Homework-30
 ## Kubernetes 3
 Продолжили работать с kubernetes, создали ingress контроллер и через него пустили доступ к reddit снаружи. Ограничили доступ к mongo внутри кластера. Подключили persistent volume к mongo.
+
+# Homework-31
+## Kubernetes 4
+Установили пакетный менеджер helm. Через него установили Gitlab, настроили в нем CI. 
