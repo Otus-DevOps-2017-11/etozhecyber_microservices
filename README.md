@@ -84,3 +84,8 @@ Inspect на образ отображает параметры образа, а
 # Homework-31
 ## Kubernetes 4
 Установили пакетный менеджер helm. Через него установили Gitlab, настроили в нем CI. 
+
+
+# Homework-32
+## Kubernetes 5
+Установили посредством helm prometheus и grafana. Также установили стек efk в kubernetes. Настроили мониторинг и сбор логов reddit-app
